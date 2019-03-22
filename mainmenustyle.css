@@ -1,0 +1,245 @@
+:root {
+  --cream:rgb(236,224,209);
+  --dark-cream:rgb(219,193,172);
+  --light-brown:rgb(150,114,89);
+  --brown:rgb(99,72,50);
+  --dark-brown:rgb(56,34,15);
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: var(--cream);
+  font-family: 'Merriweather', serif;
+}
+/* NAVIGATION */
+.navigation {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 10rem;
+  grid-template-areas:
+  "logo home menu specials about";
+  justify-items: center;
+  align-items: center;
+
+  top: 0;
+  z-index: 10;
+
+}
+.navigation a {
+  text-decoration: none;
+  color: Black;
+  padding: 40px;
+  background: var(--cream);
+  border-radius: 10%;
+  font-family: 'Merriweather', serif;
+  border: 2px solid white;
+  font-size: 22px;
+
+}
+.navigation a:hover {
+  animation: anim 0.9s cubic-bezier(1,.015,.295,1.225) forwards;
+}
+.logo {
+  grid-area: logo;
+  position:relative;
+}
+.logo i {
+
+  font-size: 100px;
+  color: var(--cream);
+}
+.logo p {
+  position: absolute;
+  left: 12px;
+  top: 43px;
+  color: var(--dark-brown);
+  font-size: 14px;
+
+}
+.home {
+  grid-area: home;
+
+}
+.home:hover {
+  animation: anim 0.9s cubic-bezier(1,.015,.295,1.225) forwards;
+  transition: 1s ease-in-out;
+}
+@keyframes anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    background: rgb(56,34,15);
+    color: var(--cream);
+    border: 2px solid var(--cream);
+  }
+}
+.menu-images a {
+  text-decoration: none;
+  color: var(--cream);
+}
+.menu-images a:hover {
+  color: var(--dark-brown);
+}
+
+.menu {
+  grid-area: menu;
+}
+.menu:hover {
+  animation: anim 0.9s cubic-bezier(1,.015,.295,1.225) forwards;
+}
+.specials {
+  grid-area: specials;
+}
+.specials:hover {
+  animation: anim 0.9s cubic-bezier(1,.015,.295,1.225) forwards;
+}
+.about {
+  grid-area: about;
+}
+.about:hover {
+  animation: anim 0.9s cubic-bezier(1,.015,.295,1.225) forwards;
+}
+/* NAVIGATION */
+
+/* CONTENT */
+.hot-bev {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 90px 600px;
+  grid-template-areas:
+  "hot-bev-heading hot-bev-heading hot-bev-heading"
+  "hot-bev-coffee hot-bev-tea hot-bev-hotchoc";
+  grid-gap: 20px;
+  margin: 20px;
+
+}
+.hot-bev-heading {
+  grid-area: hot-bev-heading;
+  background: var(--brown);
+  color: var(--cream);
+  text-align: center;
+  font-size: 30px;
+  padding: 20px;
+}
+.hot-bev-coffee {
+  grid-area: hot-bev-coffee;
+  background: var(--light-brown);
+
+}
+.hot-bev-coffee h1{
+  text-align: center;
+  padding: 10px;
+}
+.hot-bev-tea {
+  grid-area: hot-bev-tea;
+  background: var(--dark-cream);
+}
+.hot-bev-hotchoc {
+  grid-area: hot-bev-hotchoc;
+  background: var(--dark-cream);
+}
+/* forms */
+.hot-coffee-form {
+  padding: 5px 140px;
+  background: var(--cream);
+}
+.hot-coffee-drop-down {
+  background: var(--brown);
+  color: white;
+  font-size: 25px;
+  padding: 10px;
+}
+
+.hot-coffee-drop-down option {
+  color: white;
+  border: 1px solid black;
+}
+.range-coffee {
+  text-align: center;
+  padding: 10px 80px;
+
+}
+.range-coffee h1 {
+
+  background: var(--cream);
+}
+#coffee-range {
+  width: 230px;
+}
+.extras {
+  text-align: center;
+  font-size: 19px;
+}
+.extras h1 {
+
+  background: var(--cream);
+}
+.amount {
+  text-align: center;
+}
+.amount h1 {
+  background: var(--cream);
+}
+.submit {
+  text-align: center;
+  margin: 10px;
+  padding: 10px 50px;
+}
+.submitting {
+  padding: 10px 40px;
+  background: var(--cream);
+  font-family: inherit;
+  font-size: 16px;
+}
+
+
+
+/* CONTENT */
+
+/* FOOTER */
+footer {
+  display: grid;
+  grid-template-columns: 25% 25% 50%;
+  grid-template-rows: 280px 120px;
+  grid-template-areas:
+  "address contact value"
+  "copyright copyright copyright";
+  background: black;
+  color: var(--cream);
+  justify-items: center;
+  align-items: center;
+
+}
+.address {
+  grid-area: address;
+}
+.address li {
+  list-style:  square;
+  padding: 10px;
+}
+.contact {
+  grid-area: contact;
+}
+.contact li {
+  list-style:  square;
+  padding: 10px;
+}
+.value {
+  grid-area: value;
+  text-align: center;
+
+}
+.value p {
+  padding: 10px;
+  font-size: 23px;
+}
+.copyright {
+  grid-area: copyright;
+}
