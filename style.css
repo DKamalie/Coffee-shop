@@ -18,6 +18,7 @@ body {
 }
 /* NAVIGATION */
 .navigation {
+  transition: 1s ease-in-out;
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
   grid-template-rows: 10rem;
@@ -573,17 +574,31 @@ footer {
 /* MEDIA QUERIES NAV BAR */
 @media(max-width: 900px) {
   .navigation {
+    transition: 1s ease-in-out;
     display: grid;
-    grid-template-columns: 40% 30% 30%;
-    grid-template-rows: 6rem 6rem;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 9rem;
     grid-template-areas:
-    "logo home menu"
-    "logo specials about";
+    "logo home menu specials about";
+
     justify-items: center;
     align-items: center;
     position: sticky;
     top: 0;
     z-index: 10;
+
+
+  }
+  .home a {
+    padding: 50px 200px;
+  }
+  .menu a {
+
+  }
+  .specials a {
+
+  }
+  .about a {
 
   }
   .home-link {
@@ -673,11 +688,11 @@ footer {
 }
 @media(max-width: 440px) {
   .navigation {
+    transition: 1s ease-in-out;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 6.5rem 4rem 4rem 4rem 4rem;
+    grid-template-rows: 3.32rem 3.32rem 3.32rem 3.32rem;
     grid-template-areas:
-    "logo"
     "home"
     "menu"
     "specials"
@@ -685,27 +700,43 @@ footer {
     position: relative;
     top: 0;
     transition: 1s ease-in-out;
+    grid-gap: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+  }
+  .logo {
+    display: none;
   }
   .navigation a {
-    padding: 10px 100px;
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 10px 50px;
     background: rgba(56,34,15, 0.8);
     animation: small-nav 5s infinite alternate;
+
   }
   .home a {
+    padding: 5px 100px;
+    margin: 0;
     animation: home-nav-anim 5s infinite alternate;
   }
   .menu a {
+    padding: 5px 102px;
+    margin: 0;
     animation: menu-nav-anim 5s 0.5s infinite alternate;
   }
   .specials a {
-    padding: 10px 87px;
+
+    margin: 0;
+    padding: 5px 92px;
     animation: specials-nav-anim 5s 1s infinite alternate;
   }
-  .contact a {
-    animation: contact-nav-anim 5s 1.5s infinite alternate;
-  }
+
   .about a {
-    animation: about-nav-anim 5s 2s infinite alternate;
+    padding: 5px 101px;
+    margin: 0;
+    animation: about-nav-anim 5s 1.5s infinite alternate;
   }
 
   @keyframes home-nav-anim {
@@ -714,6 +745,7 @@ footer {
       background: var(--light-brown);
       width: 120px;
       transform: translateX(-30px);
+
     }
     25% {
       border-radius: 20% 0 0 0;
@@ -831,12 +863,10 @@ footer {
       transform: translateX(-30px);
     }
   }
-
-
-  .specials a {
-    padding: 10px 87px;
-  }
 }
+/* MEDIA FOR NAV */
+
+/* MEDIA FOR Top Image */
 @media(max-width:900px) {
   .top-images {
   display: grid;
@@ -874,7 +904,7 @@ footer {
 .greeting1 {
   font-size: 1rem;
 }
-
+}
 @media(max-width: 700px) {
   .top-images {
   display: grid;
@@ -951,6 +981,58 @@ footer {
   font-size: 0.9rem;
 }
 }
+@media (max-width:300px) {
+  .top-images {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 200px;
+  grid-template-areas:
+  "image1";
+  margin: 20px 15px;
+
+}
+.main-image-grid {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40% 40% 40%;
+  grid-template-areas:
+  "introduction"
+  "greeting1"
+  "menubutton";
+  color: white;
+  justify-items: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+.introduction {
+  font-size: 0.8rem;
+  padding-top: 0px;
+  margin-bottom: 50px;
+
+}
+.greeting1 {
+  font-size: 0.7rem;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
 /* CONTENT QUERIES */
 @media(max-width: 850px) {
   .menu-images {
@@ -993,7 +1075,42 @@ footer {
   }
 }
 
+@media(max-width: 300px) {
+  .menu-images {
+    grid-template-columns: 1fr;
+    grid-template-rows: 15rem 15rem 15rem 15rem;
+    grid-template-areas:
+    "hot-beverages"
+    "cold-beverages"
+    "desserts"
+    "special-menu";
+    grid-gap: 0px;
+    padding: 0;
+    justify-items: center;
+    border: none;
+    opacity: 0.8;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .hot-beverages {
+    margin: 0px;
+
+  }
+  .cold-beverages {
+    margin: 0px;
+    border-bottom: 3px solid var(--brown);
+  }
+  .desserts {
+    margin: 0px;
+  }
+  .special-menu {
+    margin: 0px;
+    border-bottom: 3px solid var(--brown);
+  }
+}
+
 /* TABLE MEDIA QUERY */
+/*
 @media(max-width: 1185px) {
   .table-container{
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1036,7 +1153,7 @@ footer {
     grid-area: table10;
   }
 }
-
+*/
 /* FOOTER QUERIES  */
 @media(max-width: 800px) {
   footer {
