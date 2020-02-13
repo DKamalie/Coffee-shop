@@ -29,8 +29,7 @@ body {
   background: url('http://media.designerpages.com/3rings/wp-content/uploads/2014/11/Bamboo-Collection-by-Barroco.jpg');
   border-bottom: 8px solid black;
 
-  position: relative;
-  top: 0;
+
   z-index: 10;
 
 }
@@ -583,8 +582,7 @@ footer {
 
     justify-items: center;
     align-items: center;
-    position: relative;
-    top: 0;
+
     z-index: 10;
 
 
